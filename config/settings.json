@@ -1,0 +1,184 @@
+{
+  "$schema": "https://aka.ms/terminal-profiles-schema",
+  "defaultProfile": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+  "copyOnSelect": false,
+  "copyFormatting": false,
+  "profiles": {
+    "defaults": {
+      "fontFace": "CaskaydiaCove NF"
+    },
+    "list": [
+      {
+        "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+        "name": "Windows PowerShell",
+        "colorScheme": "shades-of-purple",
+        "useAcrylic": true,
+        "acrylicOpacity": 0.4,
+        "commandline": "powershell.exe",
+        "hidden": false
+      },
+      {
+        "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+        "name": "Command Prompt",
+        "colorScheme": "shades-of-purple",
+        "useAcrylic": true,
+        "acrylicOpacity": 0.4,
+        "commandline": "cmd.exe",
+        "hidden": false
+      },
+      {
+        "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+        "hidden": true,
+        "name": "Azure Cloud Shell",
+        "source": "Windows.Terminal.Azure"
+      },
+      {
+        "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+        "hidden": false,
+        "colorScheme": "shades-of-purple",
+        "useAcrylic": true,
+        "acrylicOpacity": 0.4,
+        "name": "Debian",
+        "startingDirectory": "//wsl$/debian/home/ozaki",
+        "source": "Windows.Terminal.Wsl"
+      }
+    ]
+  },
+  "schemes": [
+    {
+      "name": "shades-of-purple",
+      "black": "#000000",
+      "red": "#d90429",
+      "green": "#3ad900",
+      "yellow": "#ffe700",
+      "blue": "#6943ff",
+      "purple": "#ff2c70",
+      "cyan": "#00c5c7",
+      "white": "#c7c7c7",
+      "brightBlack": "#686868",
+      "brightRed": "#f92a1c",
+      "brightGreen": "#43d426",
+      "brightYellow": "#f1d000",
+      "brightBlue": "#6871ff",
+      "brightPurple": "#ff77ff",
+      "brightCyan": "#79e8fb",
+      "brightWhite": "#ffffff",
+      "background": "#1e1d40",
+      "foreground": "#ffffff",
+      "selectionBackground": "#b362ff",
+      "cursorColor": "#fad000"
+    },
+    {
+      "name": "FishTank",
+      "black": "#03073c",
+      "red": "#c6004a",
+      "green": "#acf157",
+      "yellow": "#fecd5e",
+      "blue": "#525fb8",
+      "purple": "#986f82",
+      "cyan": "#968763",
+      "white": "#ecf0fc",
+      "brightBlack": "#6c5b30",
+      "brightRed": "#da4b8a",
+      "brightGreen": "#dbffa9",
+      "brightYellow": "#fee6a9",
+      "brightBlue": "#b2befa",
+      "brightPurple": "#fda5cd",
+      "brightCyan": "#a5bd86",
+      "brightWhite": "#f6ffec",
+      "background": "#232537",
+      "foreground": "#ecf0fe",
+      "selectionBackground": "#fcf7e9",
+      "cursorColor": "#fecd5e"
+    },
+    {
+      "name": "Hybrid",
+      "black": "#2a2e33",
+      "red": "#b84d51",
+      "green": "#b3bf5a",
+      "yellow": "#e4b55e",
+      "blue": "#6e90b0",
+      "purple": "#a17eac",
+      "cyan": "#7fbfb4",
+      "white": "#b5b9b6",
+      "brightBlack": "#1d1f22",
+      "brightRed": "#8d2e32",
+      "brightGreen": "#798431",
+      "brightYellow": "#e58a50",
+      "brightBlue": "#4b6b88",
+      "brightPurple": "#6e5079",
+      "brightCyan": "#4d7b74",
+      "brightWhite": "#5a626a",
+      "background": "#161719",
+      "foreground": "#b7bcba",
+      "selectionBackground": "#1e1f22",
+      "cursorColor": "#b7bcba"
+    },
+    {
+      "name": "Framer",
+      "black": "#141414",
+      "red": "#ff5555",
+      "green": "#98ec65",
+      "yellow": "#ffcc33",
+      "blue": "#00aaff",
+      "purple": "#aa88ff",
+      "cyan": "#88ddff",
+      "white": "#cccccc",
+      "brightBlack": "#414141",
+      "brightRed": "#ff8888",
+      "brightGreen": "#b6f292",
+      "brightYellow": "#ffd966",
+      "brightBlue": "#33bbff",
+      "brightPurple": "#cebbff",
+      "brightCyan": "#bbecff",
+      "brightWhite": "#ffffff",
+      "background": "#111111",
+      "foreground": "#777777",
+      "selectionBackground": "#666666",
+      "cursorColor": "#fcdc08"
+    }
+  ],
+  "actions": [
+    {
+      "command": { "action": "copy", "singleLine": false },
+      "keys": "ctrl+c"
+    },
+    { "command": "paste", "keys": "ctrl+v" },
+    { "command": "find", "keys": "ctrl+shift+f" },
+    { "command": { "action": "newTab", "index": 0 }, "keys": "ctrl+1" },
+    { "command": { "action": "newTab", "index": 1 }, "keys": "ctrl+2" },
+    { "command": { "action": "newTab", "index": 2 }, "keys": "ctrl+3" },
+    {
+      "command": {
+        "action": "splitPane",
+        "split": "auto",
+        "splitMode": "duplicate"
+      },
+      "keys": "alt+shift+d"
+    },
+    {
+      "command": { "action": "splitPane", "split": "horizontal" },
+      "keys": "alt+shift+down"
+    },
+    {
+      "command": { "action": "splitPane", "split": "vertical" },
+      "keys": "alt+shift+right"
+    },
+    {
+      "command": { "action": "resizePane", "direction": "down" },
+      "keys": "alt+ctrl+down"
+    },
+    {
+      "command": { "action": "resizePane", "direction": "left" },
+      "keys": "alt+ctrl+left"
+    },
+    {
+      "command": { "action": "resizePane", "direction": "right" },
+      "keys": "alt+ctrl+right"
+    },
+    {
+      "command": { "action": "resizePane", "direction": "up" },
+      "keys": "alt+ctrl+up"
+    }
+  ]
+}
