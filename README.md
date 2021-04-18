@@ -1,3 +1,3 @@
 1. Open powershell
 2. `Set-ExecutionPolicy RemoteSigned -scope CurrentUser`
-3. `iwr -useb git.io/JYADd | iex`
+3. `Invoke-WebRequest -UseBasicParsing git.io/JYADd | Invoke-Expression`

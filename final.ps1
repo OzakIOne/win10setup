@@ -6,4 +6,4 @@ pause
 Write-Host "Settings WSL 2 as default version"
 wsl --set-default-version 2
 pause
-start "ms-windows-store://pdp?productId=9MSVKQC78PK6"
+Invoke-Expression "cmd.exe /C start ms-windows-store://pdp?productId=9MSVKQC78PK6"
