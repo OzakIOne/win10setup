@@ -1,6 +1,6 @@
 Write-Host "Installing scoop"
 Invoke-WebRequest -UseBasicParsing get.scoop.sh | Invoke-Expression
-scoop install git 7zip ; scoop bucket add extras ; scoop bucket add nerd-fonts ; scoop install aria2 scoop-search CascadiaCode-NF-Mono
+scoop install git 7zip ; scoop bucket add extras ; scoop bucket add nerd-fonts ; scoop install aria2 scoop-search
 scoop config aria2-enabled true
 scoop alias add i 'scoop install $args[0]' 'Innstall app'
 scoop alias add r 'scoop uninstall $args[0]' 'Uninnstall app'

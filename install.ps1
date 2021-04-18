@@ -1,5 +1,8 @@
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }
 
+Write-Host "Installing nerdfont"
+scoop install CascadiaCode-NF-Mono
+
 Set-Location $env:USERPROFILE\Downloads\win10setup
 
 Write-Host "Monitor HZ options and disable mouse acceleration"
