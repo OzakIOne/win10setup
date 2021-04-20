@@ -1,5 +1,9 @@
 if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }
 
+Write-Host "Installing oh my posh"
+Install-PackageProvider NuGet -Force
+Install-Module -Name oh-my-posh -Scope CurrentUser -Force
+
 Write-Host "Installing nerdfont"
 scoop install CascadiaCode-NF-Mono
 
