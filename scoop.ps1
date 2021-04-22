@@ -1,6 +1,9 @@
 Write-Host "Installing scoop"
 Invoke-WebRequest -UseBasicParsing get.scoop.sh | Invoke-Expression
-scoop install git 7zip ; scoop bucket add extras ; scoop bucket add nerd-fonts ; scoop install aria2 scoop-search
+scoop install git 7zip
+scoop bucket add extras
+scoop bucket add nerd-fonts
+scoop install aria2 scoop-search sudo
 scoop config aria2-enabled true
 scoop alias add i 'scoop install $args[0]' 'Innstall app'
 scoop alias add r 'scoop uninstall $args[0]' 'Uninnstall app'
@@ -31,4 +34,4 @@ pause
 
 git clone https://github.com/ozakione/win10setup
 Start-Process .\win10setup\
-powershell.exe .\win10setup\install.ps1
+sudo .\win10setup\install.ps1
