@@ -7,4 +7,12 @@ monitorAndMouseOptions
 wslFeatures
 installWindowsTerminal
 installConfigFiles
+installSpotify
+blockSpotifyAds
+isntallSpotifyTheme
+isntallGeniusSpotify
+installProgramAssociation
+installUsefullApps
+installOtherApps
+installGpo
 windowsDebloat

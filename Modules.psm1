@@ -90,3 +90,52 @@ function windowsDebloat {
   Write-Host "Debloating windows press enter to start"
   .\Win10-Initial-Setup-Script-master\DefaultOzak.cmd
 }
+
+function installSpotify {
+  Write-Host "Installing spotify"
+  scoop bucket add spotify https://github.com/TheRandomLabs/Scoop-Spotify.git
+  scoop install spotify-latest
+}
+
+function blockSpotifyAds {
+  Write-Host "Installing blockthespot"
+  scoop install blockthespot
+}
+
+function isntallSpotifyTheme {
+  Write-Host "Installing spotify themes"
+  scoop install spicetify-cli spicetify-themes
+  spicetify config current_theme BurntSienna
+  spicetify-apply
+}
+
+function isntallGeniusSpotify {
+  Write-Host "Installing genius and musixmatch for spotify"
+  scoop install genius-spicetify
+  Write-Host "Change your musixmatch token"
+  Invoke-Expression "cmd.exe /C start $env:USERPROFILE\.spicetify\CustomApps\genius\manifest.json"
+}
+
+function installProgramAssociation {
+  Write-Host "Installing file program association"
+  dism /online /Import-DefaultAppAssociations:".\win10setup\config\FileAssoociations.xml"
+}
+
+function installUsefullApps {
+  Write-Host "Installing usefull apps"
+  scoop install mpc-be obs-studio youtube-dl ffmpeg anydesk authy discord everything ffsend keepass naps2 nomacs notepadplusplus python qbittorrent rclone sharex tightvnc wumgr
+}
+
+function installOtherApps {
+  Write-Host "Installing other apps"
+  scoop bucket add java
+  scoop bucket add nirsoft-alternative https://github.com/MCOfficer/scoop-nirsoft.git
+  scoop bucket add Sysinternals 'https://github.com/Ash258/Scoop-Sysinternals.git'
+  scoop install adb gcc hwinfo speedtest-cli waifu2x-caffe winaero-tweaker bulk-rename-utility audacity autohotkey autologon autoruns bat clockres cmake crystaldiskinfo dark ddu diffmerge dismplusplus driverstoreexplorer firefox gifski gitextensions hyperfine innounp insomnia lessmsi losslesscut mediainfo nodejs deno nuclear p4merge picotorrent processmonitor putty qaac rufus sdelete spek sumatrapdf tcpview telegram ventoy vlc webtorrent winmerge wiztree xca z zoomit
+}
+
+function installGpo {
+  Write-Host "Installing GPO"
+  Copy-Item .\win10setup\config\GroupPolicy -Destination "C:\Windows\System32\" -Recurse -Force
+  gpupdate.exe /force
+}
