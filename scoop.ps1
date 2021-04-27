@@ -21,6 +21,7 @@ aria2c "https://referrals.brave.com/latest/BraveBrowserSetup.exe" -o brave.exe
 aria2c "https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user" -o vscode.exe
 aria2c "https://github.com/OzakIOne/Win10-Initial-Setup-Script/archive/refs/heads/master.zip" -o debloat.zip
 aria2c "https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi" -o wsl.msi
+aria2c "https://desktop.docker.com/win/stable/amd64/Docker%20Desktop%20Installer.exe" -o docker.exe
 
 7z x .\debloat.zip > $null
 Remove-Item .\debloat.zip

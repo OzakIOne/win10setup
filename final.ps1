@@ -6,4 +6,8 @@ pause
 Write-Host "Settings WSL 2 as default version"
 wsl --set-default-version 2
 pause
+Write-Host "Please install debian first to install docker"
 Invoke-Expression "cmd.exe /C start ms-windows-store://pdp?productId=9MSVKQC78PK6"
+Pause
+Write-Host "Installing docker"
+"$env:USERPROFILE\Downloads\docker.exe"
