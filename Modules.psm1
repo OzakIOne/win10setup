@@ -112,7 +112,7 @@ function isntallSpotifyTheme {
 function isntallGeniusSpotify {
   Write-Host "Installing genius and musixmatch for spotify"
   scoop install genius-spicetify
-  Write-Host "Change your musixmatch token"
+  Write-Host "Change your musixmatch token : https://github.com/khanhas/genius-spicetify#musicxmatch"
   Invoke-Expression "cmd.exe /C start $env:USERPROFILE\.spicetify\CustomApps\genius\manifest.json"
 }
 
