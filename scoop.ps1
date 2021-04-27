@@ -23,6 +23,9 @@ aria2c "-j$LINES" -i .\win10setup\config\url.txt
 7z x .\debloat.zip > $null
 Remove-Item .\debloat.zip
 
+7z x .\vcppaio.zip > $null
+Remove-Item .\vcppaio.zip
+
 Write-Host "Brave install"
 .\brave.exe
 pause

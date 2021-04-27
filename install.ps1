@@ -15,4 +15,5 @@ installProgramAssociation
 installUsefullApps
 installOtherApps
 installGpo
+installVcppaio
 windowsDebloat

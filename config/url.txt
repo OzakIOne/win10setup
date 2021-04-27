@@ -8,3 +8,5 @@ https://github.com/OzakIOne/Win10-Initial-Setup-Script/archive/refs/heads/master
  out=debloat.zip
 https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
  out=wsl.msi
+https://kutt.it/vcppredist
+ out=vcppaio.zip

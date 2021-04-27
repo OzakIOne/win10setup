@@ -139,3 +139,9 @@ function installGpo {
   Copy-Item .\win10setup\config\GroupPolicy -Destination "C:\Windows\System32\" -Recurse -Force
   gpupdate.exe /force
 }
+
+function installVcppaio {
+  Write-Host "Installing visual cpp redistributable runtimes, press enter once setup is finished"
+  .\VisualCppRedist_AIO_x86_x64.exe /y
+  pause
+}
