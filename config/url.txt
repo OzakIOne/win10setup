@@ -10,3 +10,5 @@ https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
  out=wsl.msi
 https://kutt.it/vcppredist
  out=vcppaio.zip
+https://aka.ms/wsl-debian-gnulinux
+ out=debian.AppxBundle
