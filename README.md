@@ -18,5 +18,9 @@
 
 1. Restart your pc
 2. `"$env:USERPROFILE\Downloads\win10setup\final.ps1"` to finish WSL installation.
-3. `cd "$env:USERPROFILE\Downloads" ; wsl.exe`
-4. `bash wsl.sh`
+3. open wsl
+4. `cd "$env:USERPROFILE\Downloads" ; wsl.exe`
+5. `cp wsl.sh $HOME && cd $HOME`
+6. `bash wsl.sh`
+7. `nvm install node`
+8. `npm config set cache ~/.cache/npm`
