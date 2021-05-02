@@ -24,3 +24,8 @@
 6. `bash wsl.sh`
 7. `nvm install node`
 8. `npm config set cache ~/.cache/npm`
+
+## Install zsh ohmyzsh nvm antigen without cloning this repo
+
+1. Open wsl
+2. `cd $HOME && bash -c "$(curl -fsSL https://raw.githubusercontent.com/OzakIOne/win10setup/master/wsl.sh)"`
