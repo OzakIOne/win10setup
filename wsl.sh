@@ -5,8 +5,16 @@ export ZSH="$HOME/.config/omzsh"
 export NVM_DIR="$HOME/.config/nvm"
 export ADOTDIR="$HOME/.config/antigen/"
 
-sudo apt update && sudo apt upgrade -y && sudo apt install -y zsh build-essential git stow curl gcc python neovim
+sudo apt update && sudo apt upgrade -y && sudo apt install -y zsh build-essential git stow curl gcc python neovim unzip
 chsh -s $(which zsh)
+echo -e "\nInstalling github cli\n"
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+sudo apt-add-repository https://cli.github.com/packages
+sudo apt update
+sudo apt install gh
+
+echo -e "\nInstalling deno\n"
+curl -fsSL https://deno.land/x/install/install.sh | sudo DENO_INSTALL=/usr/local sh
 
 if [[ -f "$HOME/.profile" ]]; then
   rm $HOME/.profile
