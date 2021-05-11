@@ -11,9 +11,9 @@ installSpotify
 blockSpotifyAds
 isntallSpotifyTheme
 isntallGeniusSpotify
-installProgramAssociation
-installUsefullApps
+#installUsefullApps
 installOtherApps
+installProgramAssociation
 installGpo
 installVcppaio
 windowsDebloat
