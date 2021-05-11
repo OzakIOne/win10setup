@@ -118,7 +118,7 @@ function isntallGeniusSpotify {
 
 function installProgramAssociation {
   Write-Host "Installing file program association"
-  dism /online /Import-DefaultAppAssociations:".\win10setup\config\FileAssoociations.xml"
+  sudo dism /online /Import-DefaultAppAssociations:".\win10setup\config\FileAssociations.xml"
 }
 
 function installUsefullApps {
