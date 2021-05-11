@@ -16,6 +16,8 @@ scoop alias add ls 'scoop list' 'List installed apps'
 
 Set-Location $env:USERPROFILE\Downloads
 
+git clone https://github.com/ozakione/win10setup
+
 Write-Host "Downloading brave vscode wsl and debloat setup"
 $LINES = (Get-Content .\win10setup\config\url.txt | Measure-Object -line).Lines / 2
 aria2c "-j$LINES" -i .\win10setup\config\url.txt
@@ -33,6 +35,5 @@ Write-Host "VSCode install"
 .\vscode.exe
 pause
 
-git clone https://github.com/ozakione/win10setup
 Start-Process .\win10setup\
 sudo .\win10setup\install.ps1
