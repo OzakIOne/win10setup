@@ -104,16 +104,19 @@ function blockSpotifyAds {
 
 function isntallSpotifyTheme {
   Write-Host "Installing spotify themes"
-  scoop install spicetify-cli spicetify-themes
-  spicetify config current_theme BurntSienna
+  scoop install spicetify-cli
+  Set-Location $env:HOMEPATH\.spicetify\
+  git clone --branch v2 https://github.com/morpheusthewhite/spicetify-themes/ Themes\
+  spicetify config current_theme Sleek
   spicetify-apply
 }
 
 function isntallGeniusSpotify {
-  Write-Host "Installing genius and musixmatch for spotify"
-  scoop install genius-spicetify
-  Write-Host "Change your musixmatch token : https://github.com/khanhas/genius-spicetify#musicxmatch"
-  Invoke-Expression "cmd.exe /C start $env:USERPROFILE\.spicetify\CustomApps\genius\manifest.json"
+  Write-Host "Installing lyrics-plus for spotify"
+  spicetify config custom_apps lyrics-plus
+  spicetify-apply
+  # Write-Host "Change your musixmatch token : https://github.com/khanhas/genius-spicetify#musicxmatch"
+  # Invoke-Expression "cmd.exe /C start $env:USERPROFILE\.spicetify\CustomApps\genius\manifest.json"
 }
 
 function installProgramAssociation {
