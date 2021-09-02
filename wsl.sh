@@ -5,7 +5,7 @@ export ZSH="$HOME/.config/omzsh"
 export NVM_DIR="$HOME/.config/nvm"
 export ADOTDIR="$HOME/.config/antigen/"
 
-sudo apt update && sudo apt upgrade -y && sudo apt install -y zsh build-essential git stow curl gcc python neovim unzip
+sudo apt update && sudo apt upgrade -y && sudo apt install -y software-properties-common zsh build-essential git stow curl gcc python neovim unzip
 chsh -s $(which zsh)
 echo -e "\nInstalling github cli\n"
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
