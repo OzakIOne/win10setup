@@ -9,11 +9,11 @@ installWindowsTerminal
 installConfigFiles
 installSpotify
 blockSpotifyAds
-installSpotifyTheme
-installGeniusSpotify
-#installUsefullApps
-installOtherApps
-installProgramAssociation
-installGpo
+#installSpotifyTheme
+#installGeniusSpotify
+installUsefullApps
+#installOtherApps
+#installProgramAssociation
+#installGpo
 installVcppaio
 windowsDebloat
