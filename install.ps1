@@ -9,8 +9,8 @@ installWindowsTerminal
 installConfigFiles
 installSpotify
 blockSpotifyAds
-isntallSpotifyTheme
-isntallGeniusSpotify
+installSpotifyTheme
+installGeniusSpotify
 #installUsefullApps
 installOtherApps
 installProgramAssociation

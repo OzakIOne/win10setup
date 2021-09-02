@@ -102,7 +102,7 @@ function blockSpotifyAds {
   scoop install blockthespot
 }
 
-function isntallSpotifyTheme {
+function installSpotifyTheme {
   Write-Host "Installing spotify themes"
   scoop install spicetify-cli
   Set-Location $env:HOMEPATH\.spicetify\
@@ -111,7 +111,7 @@ function isntallSpotifyTheme {
   spicetify-apply
 }
 
-function isntallGeniusSpotify {
+function installGeniusSpotify {
   Write-Host "Installing lyrics-plus for spotify"
   spicetify config custom_apps lyrics-plus
   spicetify-apply
