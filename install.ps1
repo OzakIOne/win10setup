@@ -1,6 +1,7 @@
 Import-Module -Name .\win10setup\Modules.psm1 -Verbose
 
 installOhMyPosh
+installPSReadLine
 installCascadiaNF
 addEnvUserVar
 monitorAndMouseOptions

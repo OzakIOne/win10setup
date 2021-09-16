@@ -38,6 +38,11 @@ function installOhMyPosh {
   Install-Module -Name oh-my-posh -Scope CurrentUser -Force
 }
 
+function installPSReadLine {
+  Install-Module -Name PowerShellGet -Force
+  Install-Module PSReadLine -AllowPrerelease -Force
+}
+
 function installCascadiaNF {
   Write-Host "Installing nerdfont"
   scoop install CascadiaCode-NF-Mono
