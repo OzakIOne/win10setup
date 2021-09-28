@@ -153,3 +153,11 @@ function installVcppaio {
   .\VisualCppRedist_AIO_x86_x64.exe /y
   pause
 }
+
+function installYtdlpConfigFile {
+  Write-Host "Installing yt-dlp config file"
+  $ytdlpConfigPath = "$env:USERPROFILE\scoop\apps\yt-dlp\current\"
+  if(Test-Path $ytdlpConfigPath) {
+      New-Item -ItemType SymbolicLink -Target ".\config\yt-dlp\yt-dlp.conf" -Path "$ytdlpConfigPath\yt-dlp.conf"
+  }
+}

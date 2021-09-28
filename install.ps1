@@ -7,12 +7,13 @@ addEnvUserVar
 monitorAndMouseOptions
 wslFeatures
 installWindowsTerminal
-installConfigFiles
+  installConfigFiles
 installSpotify
-blockSpotifyAds
+  blockSpotifyAds
 #installSpotifyTheme
 #installGeniusSpotify
 installUsefullApps
+  installYtdlpConfigFile
 #installOtherApps
 #installProgramAssociation
 #installGpo
