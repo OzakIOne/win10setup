@@ -131,7 +131,7 @@ function installProgramAssociation {
 
 function installUsefullApps {
   Write-Host "Installing usefull apps"
-  scoop install mpc-be obs-studio youtube-dl ffmpeg anydesk authy discord everything ffsend keepass naps2 nomacs notepadplusplus python qbittorrent rclone sharex tightvnc wumgr
+  scoop install mpc-be obs-studio youtube-dl yt-dlp ffmpeg anydesk authy discord everything ffsend keepass naps2 nomacs notepadplusplus python qbittorrent rclone sharex tightvnc wumgr
 }
 
 function installOtherApps {
