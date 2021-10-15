@@ -16,10 +16,10 @@ if (($host.Name -eq 'ConsoleHost'))
 }
 
 Invoke-Expression (&scoop-search --hook)
-#Set-PoshPrompt -Theme stelbent.minimal
+Set-PoshPrompt -Theme stelbent.minimal
 #Set-PoshPrompt -Theme craver
 #Set-PoshPrompt -Theme material
-Set-PoshPrompt -Theme patriksvensson
+# Set-PoshPrompt -Theme patriksvensson
 
 ### phelp // outputs your profiles aliases and functions
 function phelp()
