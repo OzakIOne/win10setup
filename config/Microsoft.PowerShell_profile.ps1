@@ -82,13 +82,13 @@ function myip([string]$copy)
     if($copy -eq 'copy')
     {
         (Get-NetIPConfiguration | Where-Object {
-            $_.IPv4DefaultGateway -ne $null -and
+            $null -ne $_.IPv4DefaultGateway  -and
             $_.NetAdapter.Status -ne "Disconnected"
         }).IPv4Address.IPAddress | clip
     }
     (Get-NetIPConfiguration |
     Where-Object {
-        $_.IPv4DefaultGateway -ne $null -and
+        $null -ne $_.IPv4DefaultGateway  -and
         $_.NetAdapter.Status -ne "Disconnected"
     }).IPv4Address.IPAddress
 }
