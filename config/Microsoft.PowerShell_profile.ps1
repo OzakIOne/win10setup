@@ -13,6 +13,7 @@ if (($host.Name -eq 'ConsoleHost'))
     Set-PSReadlineKeyHandler -Key UpArrow   -Function HistorySearchBackward
     Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
     Set-PSReadLineKeyHandler -Key Tab -Function Complete
+    Set-PSReadLineOption -HistorySearchCursorMovesToEnd
 }
 
 Invoke-Expression (&scoop-search --hook)
