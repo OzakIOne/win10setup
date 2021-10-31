@@ -156,8 +156,8 @@ function installVcppaio {
 
 function installYtdlpConfigFile {
   Write-Host "Installing yt-dlp config file"
-  $ytdlpConfigPath = "$env:USERPROFILE\scoop\apps\yt-dlp\current\"
+  $ytdlpConfigPath = "$env:APPDATA\yt-dlp\"
   if(Test-Path $ytdlpConfigPath) {
-      New-Item -ItemType SymbolicLink -Target ".\config\yt-dlp\yt-dlp.conf" -Path "$ytdlpConfigPath\yt-dlp.conf"
+      New-Item -ItemType SymbolicLink -Target ".\config\yt-dlp\yt-dlp.conf" -Path "$ytdlpConfigPath\config"
   }
 }
