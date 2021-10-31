@@ -36,11 +36,21 @@ function installOhMyPosh {
   Write-Host "Installing oh my posh"
   Install-PackageProvider NuGet -Force
   Install-Module -Name oh-my-posh -Scope CurrentUser -Force
+  pwsh.exe -Command Install-Module -Name oh-my-posh -Scope CurrentUser -Force
 }
 
 function installPSReadLine {
+  Write-Host "Installing PSReadLine"
   Install-Module -Name PowerShellGet -Force
   Install-Module PSReadLine -AllowPrerelease -Force
+  pwsh.exe -Command Install-Module -Name PowerShellGet -Force
+  pwsh.exe -Command Install-Module PSReadLine -AllowPrerelease -Force
+}
+
+function installTerminalIcons {
+  Write-Host "Installing Terminal Icons"
+  Install-Module -Name Terminal-Icons -Repository PSGallery
+  pwsh.exe -Command Install-Module -Name Terminal-Icons -Repository PSGallery
 }
 
 function installCascadiaNF {
@@ -74,8 +84,10 @@ function installConfigFiles {
   closeRunningProcess("WindowsTerminal")
   if (Test-Path -Path $PS_PROFILE_PATH -PathType Leaf) {
     backupFile($PS_PROFILE_PATH)
+    backupFile("$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1")
   } else {
     New-Item -ItemType SymbolicLink -Target .\win10setup\config\Microsoft.PowerShell_profile.ps1 -Path $PS_PROFILE_PATH
+    New-Item -ItemType SymbolicLink -Target .\win10setup\config\Microsoft.PowerShell_profile.ps1 -Path "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
   }
 
   if (Test-Path -Path $TERMINAL_CONFIG_PATH -PathType Leaf) {

@@ -5,10 +5,26 @@
         {
             "command": 
             {
+                "action": "resizePane",
+                "direction": "up"
+            },
+            "keys": "ctrl+alt+up"
+        },
+        {
+            "command": 
+            {
                 "action": "copy",
                 "singleLine": false
             },
             "keys": "ctrl+c"
+        },
+        {
+            "command": 
+            {
+                "action": "newTab",
+                "index": 1
+            },
+            "keys": "ctrl+2"
         },
         {
             "command": "find",
@@ -30,14 +46,6 @@
             "command": 
             {
                 "action": "newTab",
-                "index": 0
-            },
-            "keys": "ctrl+1"
-        },
-        {
-            "command": 
-            {
-                "action": "newTab",
                 "index": 2
             },
             "keys": "ctrl+3"
@@ -46,9 +54,9 @@
             "command": 
             {
                 "action": "newTab",
-                "index": 1
+                "index": 0
             },
-            "keys": "ctrl+2"
+            "keys": "ctrl+1"
         },
         {
             "command": 
@@ -90,14 +98,6 @@
                 "direction": "right"
             },
             "keys": "ctrl+alt+right"
-        },
-        {
-            "command": 
-            {
-                "action": "resizePane",
-                "direction": "up"
-            },
-            "keys": "ctrl+alt+up"
         }
     ],
     "copyFormatting": "none",
@@ -150,6 +150,28 @@
                 "name": "Debian",
                 "source": "Windows.Terminal.Wsl",
                 "startingDirectory": "//wsl$/debian/home/"
+            },
+            {
+                "altGrAliasing": true,
+                "antialiasingMode": "grayscale",
+                "backgroundImage": "desktopWallpaper",
+                "backgroundImageOpacity": 0.20000000000000001,
+                "bellStyle": "none",
+                "closeOnExit": "graceful",
+                "commandline": "C:\\Program Files\\PowerShell\\7\\pwsh.exe -nologo",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "size": 12
+                },
+                "guid": "{673fef63-c51d-4950-95bf-39033f9d6bcc}",
+                "historySize": 9001,
+                "icon": "ms-appx:///ProfileIcons/pwsh.png",
+                "name": "PowerShell7",
+                "padding": "8, 8, 8, 8",
+                "snapOnInput": true,
+                "startingDirectory": "%USERPROFILE%",
+                "suppressApplicationTitle": false
             }
         ]
     },

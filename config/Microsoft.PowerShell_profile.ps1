@@ -14,7 +14,15 @@ if (($host.Name -eq 'ConsoleHost'))
     Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
     Set-PSReadLineKeyHandler -Key Tab -Function Complete
     Set-PSReadLineOption -HistorySearchCursorMovesToEnd
+    Set-PSReadLineOption -Colors @{ InlinePrediction = '#F6546A'}
+    if(($host.Version.Major -eq 7))
+    {
+        Set-PSReadLineOption -PredictionViewStyle ListView
+        Set-PSReadLineOption -EditMode Windows
+    }
 }
+
+Import-Module -Name Terminal-Icons
 
 Invoke-Expression (&scoop-search --hook)
 Set-PoshPrompt -Theme stelbent.minimal
