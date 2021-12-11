@@ -116,8 +116,8 @@
         "defaults": 
         {
             "acrylicOpacity": 0.94999999999999996,
-            "backgroundImageOpacity": 0.20000000000000001,
             "backgroundImage": "desktopWallpaper",
+            "backgroundImageOpacity": 0.20000000000000001,
             "bellStyle": "none",
             "colorScheme": "shades-of-purple",
             "font": 
@@ -152,7 +152,7 @@
                 "hidden": false,
                 "name": "Debian",
                 "source": "Windows.Terminal.Wsl",
-                "startingDirectory": "//wsl$/debian/home/"
+                "startingDirectory": "\\\\wsl$\\Debian\\home\\ozaki"
             },
             {
                 "commandline": "C:\\Users\\ozaki\\scoop\\shims\\pwsh.exe -nologo",
@@ -465,5 +465,5 @@
             "yellow": "#FFE700"
         }
     ],
-    "tabWidthMode": "compact"
+    "tabWidthMode": "titleLength"
 }
