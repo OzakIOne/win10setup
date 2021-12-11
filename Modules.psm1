@@ -5,16 +5,24 @@ function backupFile {
   param (
     $File
   )
-  $path = ".\win10setup\Backup"
-  if(!(Test-Path $path))
-  {
-    New-Item -ItemType Directory -Force -Path $path
+  $backupPath = ".\win10setup\Backup"
+  if(!(Test-Path $backupPath)) {
+    createDir($backupPath)
   }
   Copy-Item -Path $File -Destination .\win10setup\Backup
   if($?) {
     Remove-Item $File
   } else {
     Write-Error "There was an error while backuping $File"
+  }
+}
+
+function createDir {
+  param (
+    $Path
+  )
+  if(!(Test-Path $Path)) {
+    New-Item -ItemType Directory -Force -Path $path
   }
 }
 
@@ -170,6 +178,10 @@ function installYtdlpConfigFile {
   Write-Host "Installing yt-dlp config file"
   $ytdlpConfigPath = "$env:APPDATA\yt-dlp\"
   if(Test-Path $ytdlpConfigPath) {
+      backupFile("$ytdlpConfigPath\yt-dlp.conf")
       New-Item -ItemType SymbolicLink -Target ".\config\yt-dlp\yt-dlp.conf" -Path "$ytdlpConfigPath\config"
+  }
+  else {
+    createDir($ytdlpConfigPath)
   }
 }
