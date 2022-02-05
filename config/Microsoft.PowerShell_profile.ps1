@@ -101,3 +101,17 @@ function myip([string]$copy)
         $_.NetAdapter.Status -ne "Disconnected"
     }).IPv4Address.IPAddress
 }
+### pubip // print public network ip and copied if "copy" arg
+function pubip([string]$copy)
+{
+    if($copy -eq 'copy')
+    {
+        curl.exe -s icanhazip.com | clip
+    }
+    curl.exe icanhazip.com
+}
+### upfile // upload a file to 0x0.st
+function upfile([string]$file)
+{
+    curl.exe -F "file=@$file" https://0x0.st
+}
