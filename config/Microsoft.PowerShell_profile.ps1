@@ -32,6 +32,15 @@ Set-PoshPrompt -Theme stelbent.minimal
 function phelp() {
     Get-Content $PROFILE | Select-String -Pattern "New-Alias|###" | Select-String -Pattern "Get-Content" -NotMatch
 }
+### eee // open explorer.exe in current directory
+function eee([string]$dir) {
+    if (!$dir) {
+        explorer.exe (Get-Location).Path
+    }
+    else {
+        explorer.exe $dir
+    }
+}
 ### ydpce // edit the yt-dlp config file
 function ydpce() {
     code C:\Users\ozaki\AppData\Roaming\yt-dlp\config
