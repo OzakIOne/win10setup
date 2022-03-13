@@ -10,7 +10,8 @@ if (($host.Name -eq 'ConsoleHost')) {
     Set-PSReadLineOption -PredictionSource History
     Set-PSReadlineKeyHandler -Key UpArrow   -Function HistorySearchBackward
     Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
-    Set-PSReadLineKeyHandler -Key Tab -Function Complete
+    # Set-PSReadLineKeyHandler -Key Tab -Function Complete
+    Set-PSReadLineKeyHandler -Key Tab -Function MenuComplete
     Set-PSReadLineOption -HistorySearchCursorMovesToEnd
     Set-PSReadLineOption -Colors @{ InlinePrediction = '#F6546A' }
     if (($host.Version.Major -eq 7)) {
