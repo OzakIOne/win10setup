@@ -104,9 +104,20 @@ function ydpr([string]$name, [string]$url) {
     }
 }
 ### fileserv // create a python web file server in the directory you want
-function fileserv([string]$dir)
-{
-    myip ; Set-Location $dir ; python3 -m http.server
+function fileserv([string]$dir, [int]$port = 8000) {
+    if (!$dir) {
+        Write-Host "Usage: fileserv [dir]"
+        return
+    }
+    if ($port -lt 1 -or $port -gt 65535) {
+        Write-Host 'Port must be between 1 and 65535'
+        return
+    }
+    else {
+        $localip = myip
+        $publicip = pubip
+        Write-Host "${localip}:${port}" ; Write-Host "${publicip}:${port}" ; python3 -m http.server --directory "${dir}" "${port}"
+    }
 }
 ### myip // print curent network ip and copied if "copy" arg
 function myip([string]$copy) {
