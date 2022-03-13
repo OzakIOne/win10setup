@@ -48,10 +48,21 @@ function ydln([string]$url) {
     youtube-dl --ignore-config "$url"
 }
 ### scd // will change your directory with environment variables (it's a shortcut of cd $env:dev => scd dev)
-function scd([string]$dir)
-{
-    Set-Location Env:\
-    Set-Location (Get-ChildItem -Path $dir).value
+function scd([string]$dir) {
+    if (!$dir) {
+        Write-Host "Usage: scd [dev|apps|temp]"
+    }
+    elseif ($dir.ToLower() -eq "list") {
+        (Get-ChildItem Env:) | ForEach-Object {
+            if (Test-Path -Path $($_.value) -PathType Container) {
+                Write-Host -NoNewline -f red "$($_.name)" ; Write-Host -f blue " $($_.value)"
+            }
+        }
+    }
+    else {
+        Set-Location Env:\
+        Set-Location (Get-ChildItem -Path $dir).value
+    }
 }
 ### sxsa // analyze your WinSXS directory
 function sxsa() {
