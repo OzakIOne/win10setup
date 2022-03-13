@@ -5,18 +5,15 @@ New-Alias -Name "spicetify apply" -Value spicetify-apply
 New-Alias -Name "spicetify enable devtool" -Value spicetify-enable-devtool
 New-Alias -Name "spicetify disable devtool" -Value spicetify-disable-devtool
 
-if (($host.Name -eq 'ConsoleHost'))
-#  -and (Get-InstalledModule | where-object {$_.name -eq "PSReadLine"})
-{
+if (($host.Name -eq 'ConsoleHost')) {
     Import-Module PSReadLine
     Set-PSReadLineOption -PredictionSource History
     Set-PSReadlineKeyHandler -Key UpArrow   -Function HistorySearchBackward
     Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
     Set-PSReadLineKeyHandler -Key Tab -Function Complete
     Set-PSReadLineOption -HistorySearchCursorMovesToEnd
-    Set-PSReadLineOption -Colors @{ InlinePrediction = '#F6546A'}
-    if(($host.Version.Major -eq 7))
-    {
+    Set-PSReadLineOption -Colors @{ InlinePrediction = '#F6546A' }
+    if (($host.Version.Major -eq 7)) {
         Set-PSReadLineOption -PredictionViewStyle ListView
         Set-PSReadLineOption -EditMode Windows
     }
@@ -31,27 +28,22 @@ Set-PoshPrompt -Theme stelbent.minimal
 # Set-PoshPrompt -Theme patriksvensson
 
 ### phelp // outputs your profiles aliases and functions
-function phelp()
-{
+function phelp() {
     Get-Content $PROFILE | Select-String -Pattern "New-Alias|###" | Select-String -Pattern "Get-Content" -NotMatch
 }
-### ydln/ydpn // ignores the config and so will download the video in the current directory
-function ydpn([string]$url)
-{
+### ydpn // ignores the config and so will download the video in the current directory
+function ydpn([string]$url) {
     yt-dlp --ignore-config "$url"
 }
 ### ydpa // download only the audio of a video and then plays it to mpc-be
-function ydpa([string]$url)
-{
+function ydpa([string]$url) {
     yt-dlp -x -P "%TMP%/" --sponsorblock-remove all --embed-metadata --restrict-filenames -o "%(title)s.%(ext)s" "$url" --exec mpc-be.exe
 }
 ### ydpmpc // download the video and then plays it to mpc-be
-function ydpmpc([string]$url)
-{
+function ydpmpc([string]$url) {
     yt-dlp -P "%TMP%/" --no-sponsorblock --embed-metadata --restrict-filenames -o "%(title)s.%(ext)s" "$url" --exec mpc-be.exe
 }
-function ydln([string]$url)
-{
+function ydln([string]$url) {
     youtube-dl --ignore-config "$url"
 }
 ### scd // will change your directory with environment variables (it's a shortcut of cd $env:dev => scd dev)
@@ -61,13 +53,11 @@ function scd([string]$dir)
     Set-Location (Get-ChildItem -Path $dir).value
 }
 ### sxsa // analyze your WinSXS directory
-function sxsa()
-{
+function sxsa() {
     Dism.exe /Online /Cleanup-Image /AnalyzeComponentStore
 }
 ### sxsc // clean your WinSXS directory
-function sxsc()
-{
+function sxsc() {
     Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
 }
 ### jjar // executes a jar file
@@ -91,13 +81,13 @@ function myip([string]$copy)
     if($copy -eq 'copy')
     {
         (Get-NetIPConfiguration | Where-Object {
-            $null -ne $_.IPv4DefaultGateway  -and
+            $null -ne $_.IPv4DefaultGateway -and
             $_.NetAdapter.Status -ne "Disconnected"
         }).IPv4Address.IPAddress | clip
     }
     (Get-NetIPConfiguration |
     Where-Object {
-        $null -ne $_.IPv4DefaultGateway  -and
+        $null -ne $_.IPv4DefaultGateway -and
         $_.NetAdapter.Status -ne "Disconnected"
     }).IPv4Address.IPAddress
 }
