@@ -32,6 +32,10 @@ Set-PoshPrompt -Theme stelbent.minimal
 function phelp() {
     Get-Content $PROFILE | Select-String -Pattern "New-Alias|###" | Select-String -Pattern "Get-Content" -NotMatch
 }
+### ydpce // edit the yt-dlp config file
+function ydpce() {
+    code C:\Users\ozaki\AppData\Roaming\yt-dlp\config
+}
 ### ydpn // ignores the config and so will download the video in the current directory
 function ydpn([string]$url) {
     yt-dlp --ignore-config "$url"
