@@ -76,10 +76,8 @@ function fileserv([string]$dir)
     myip ; Set-Location $dir ; python3 -m http.server
 }
 ### myip // print curent network ip and copied if "copy" arg
-function myip([string]$copy)
-{
-    if($copy -eq 'copy')
-    {
+function myip([string]$copy) {
+    if ($copy.ToLower() -eq 'copy') {
         (Get-NetIPConfiguration | Where-Object {
             $null -ne $_.IPv4DefaultGateway -and
             $_.NetAdapter.Status -ne "Disconnected"
@@ -92,13 +90,11 @@ function myip([string]$copy)
     }).IPv4Address.IPAddress
 }
 ### pubip // print public network ip and copied if "copy" arg
-function pubip([string]$copy)
-{
-    if($copy -eq 'copy')
-    {
+function pubip([string]$copy) {
+    if ($copy.ToLower() -eq 'copy') {
         curl.exe -s icanhazip.com | clip
     }
-    curl.exe icanhazip.com
+    curl.exe -s icanhazip.com
 }
 ### upfile // upload a file to 0x0.st
 function upfile([string]$file)
