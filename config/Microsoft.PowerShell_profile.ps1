@@ -62,14 +62,22 @@ function sxsc() {
     Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
 }
 ### jjar // executes a jar file
-function jjar([string]$file)
-{
-    java -jar "$file"
+function jjar([string]$file) {
+    if (!$file) {
+        Write-Host "Usage: jjar <file.jar>"
+    }
+    else {
+        java -jar "$file"
+    }
 }
 ### ydpr // rename downloaded video while keeping extension
-function ydpr([string]$name, [string]$url)
-{
-    yt-dlp -o "$name.%(ext)s" "$url"
+function ydpr([string]$name, [string]$url) {
+    if (!$name -or !$url) {
+        Write-Host "Usage: ydpr [name] [url]"        
+    }
+    else {
+        yt-dlp -o "$name.%(ext)s" "$url"
+    }
 }
 ### fileserv // create a python web file server in the directory you want
 function fileserv([string]$dir)
@@ -98,7 +106,11 @@ function pubip([string]$copy) {
     curl.exe -s icanhazip.com
 }
 ### upfile // upload a file to 0x0.st
-function upfile([string]$file)
-{
-    curl.exe -F "file=@$file" https://0x0.st
+function upfile([string]$file) {
+    if (!$file) {
+        Write-Host "Usage: upfile <file>"
+    }
+    else {
+        curl.exe -F "file=@$file" https://0x0.st
+    }
 }
