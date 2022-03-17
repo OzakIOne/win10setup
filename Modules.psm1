@@ -17,11 +17,11 @@ function backupFile {
   }
 }
 
-function createDir {
+function New-Directory {
   param (
-    $Path
+    [string]$Path
   )
-  if(!(Test-Path $Path)) {
+  if (!(Test-Path $Path)) {
     New-Item -ItemType Directory -Force -Path $path
   }
 }
