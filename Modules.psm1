@@ -178,7 +178,7 @@ function installGeniusSpotify {
 
 function installProgramAssociation {
   Write-Host "Installing file program association"
-  sudo dism /online /Import-DefaultAppAssociations:".\win10setup\config\FileAssociations.xml"
+  sudo dism /online /Import-DefaultAppAssociations:"$env:USERPROFILE\Downloads\win10setup\config\FileAssociations.xml"
 }
 
 function installUsefullApps {
@@ -196,7 +196,7 @@ function installOtherApps {
 
 function installGpo {
   Write-Host "Installing GPO"
-  Copy-Item .\win10setup\config\GroupPolicy -Destination "C:\Windows\System32\" -Recurse -Force
+  Copy-Item $env:USERPROFILE\Downloads\win10setup\config\GroupPolicy -Destination "C:\Windows\System32\" -Recurse -Force
   gpupdate.exe /force
 }
 
