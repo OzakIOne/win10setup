@@ -1,5 +1,6 @@
-$TERMINAL_CONFIG_PATH="$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
-$PS_PROFILE_PATH="$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
+[string]$TERMINAL_CONFIG_PATH = "$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
+[string]$PS_PROFILE_PATH = "$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
+[string]$PS_PROFILE_PATH_2 = "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
 
 function Backup-File {
   param (
