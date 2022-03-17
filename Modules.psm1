@@ -1,18 +1,20 @@
 $TERMINAL_CONFIG_PATH="$env:USERPROFILE\AppData\Local\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json"
 $PS_PROFILE_PATH="$env:USERPROFILE\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1"
 
-function backupFile {
+function Backup-File {
   param (
-    $File
+    [string]$File
   )
-  $backupPath = ".\win10setup\Backup"
-  if(!(Test-Path $backupPath)) {
-    createDir($backupPath)
+  [string]$backupPath = "$env:USERPROFILE\Downloads\win10setup\Backup"
+  if (!(Test-Path $backupPath)) {
+    New-Directory($backupPath)
   }
-  Copy-Item -Path $File -Destination .\win10setup\Backup
-  if($?) {
-    Remove-Item $File
-  } else {
+  $currentDate = Get-Date -Format "yyyy-MM-dd-HH-mm"
+  Copy-Item -Path "${File}__${currentDate}.bak" -Destination $env:USERPROFILE\Downloads\win10setup\Backup
+  if ($?) {
+    Remove-Item -Path $File
+  }
+  else {
     Write-Error "There was an error while backuping $File"
   }
 }
