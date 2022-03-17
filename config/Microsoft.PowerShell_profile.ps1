@@ -33,9 +33,12 @@ function phelp() {
     Get-Content $PROFILE | Select-String -Pattern "New-Alias|###" | Select-String -Pattern "Get-Content" -NotMatch
 }
 ### eee // open explorer.exe in current directory
-function eee([string]$dir) {
+function eee {
+    param(
+        [string]$dir = (Get-Location).Path
+    )
     if (!$dir) {
-        explorer.exe (Get-Location).Path
+        explorer.exe $dir
     }
     else {
         explorer.exe $dir
@@ -46,22 +49,27 @@ function ydpce() {
     code C:\Users\ozaki\AppData\Roaming\yt-dlp\config
 }
 ### ydpn // ignores the config and so will download the video in the current directory
-function ydpn([string]$url) {
+function ydpn {
+    param([string]$url)
     yt-dlp --ignore-config "$url"
 }
 ### ydpa // download only the audio of a video and then plays it to mpc-be
-function ydpa([string]$url) {
+function ydpa {
+    param([string]$url)
     yt-dlp -x -P "%TMP%/" --sponsorblock-remove all --embed-metadata --restrict-filenames -o "%(title)s.%(ext)s" "$url" --exec mpc-be.exe
 }
 ### ydpmpc // download the video and then plays it to mpc-be
-function ydpmpc([string]$url) {
+function ydpmpc {
+    param([string]$url)
     yt-dlp -P "%TMP%/" --no-sponsorblock --embed-metadata --restrict-filenames -o "%(title)s.%(ext)s" "$url" --exec mpc-be.exe
 }
-function ydln([string]$url) {
+function ydln {
+    param([string]$url)
     youtube-dl --ignore-config "$url"
 }
 ### scd // will change your directory with environment variables (it's a shortcut of cd $env:dev => scd dev)
-function scd([string]$dir) {
+function scd {
+    param([string]$dir)
     if (!$dir) {
         Write-Host "Usage: scd [dev|apps|temp]"
     }
@@ -86,7 +94,8 @@ function sxsc() {
     Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
 }
 ### jjar // executes a jar file
-function jjar([string]$file) {
+function jjar {
+    param([string]$file)
     if (!$file) {
         Write-Host "Usage: jjar <file.jar>"
     }
@@ -95,7 +104,11 @@ function jjar([string]$file) {
     }
 }
 ### ydpr // rename downloaded video while keeping extension
-function ydpr([string]$name, [string]$url) {
+function ydpr {
+    param(
+        [string]$name,
+        [string]$url
+    )
     if (!$name -or !$url) {
         Write-Host "Usage: ydpr [name] [url]"        
     }
@@ -104,7 +117,11 @@ function ydpr([string]$name, [string]$url) {
     }
 }
 ### fileserv // create a python web file server in the directory you want
-function fileserv([string]$dir, [int]$port = 8000) {
+function fileserv {
+    param(
+        [string]$dir,
+        [int]$port = 8000
+    )
     if (!$dir) {
         Write-Host "Usage: fileserv [dir]"
         return
@@ -120,7 +137,8 @@ function fileserv([string]$dir, [int]$port = 8000) {
     }
 }
 ### myip // print curent network ip and copied if "copy" arg
-function myip([string]$copy) {
+function myip {
+    param([string]$copy)
     if ($copy.ToLower() -eq 'copy') {
         (Get-NetIPConfiguration | Where-Object {
             $null -ne $_.IPv4DefaultGateway -and
@@ -134,14 +152,16 @@ function myip([string]$copy) {
     }).IPv4Address.IPAddress
 }
 ### pubip // print public network ip and copied if "copy" arg
-function pubip([string]$copy) {
+function pubip {
+    param([string]$copy)
     if ($copy.ToLower() -eq 'copy') {
         curl.exe -s icanhazip.com | clip
     }
     curl.exe -s icanhazip.com
 }
 ### upfile // upload a file to 0x0.st
-function upfile([string]$file) {
+function upfile {
+    param([string]$file)
     if (!$file) {
         Write-Host "Usage: upfile <file>"
     }
