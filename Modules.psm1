@@ -209,11 +209,20 @@ function installVcppaio {
 function installYtdlpConfigFile {
   Write-Host "Installing yt-dlp config file"
   $ytdlpConfigPath = "$env:APPDATA\yt-dlp\"
-  if(Test-Path $ytdlpConfigPath) {
-      backupFile("$ytdlpConfigPath\yt-dlp.conf")
-      New-Item -ItemType SymbolicLink -Target ".\config\yt-dlp\yt-dlp.conf" -Path "$ytdlpConfigPath\config"
+  if (Test-Path $ytdlpConfigPath) {
+    Backup-File("$ytdlpConfigPath\yt-dlp.conf")
+    New-Item -ItemType SymbolicLink -Target ".\config\yt-dlp\yt-dlp.conf" -Path "$ytdlpConfigPath\config"
   }
   else {
-    createDir($ytdlpConfigPath)
+    New-Directory($ytdlpConfigPath)
+  }
+}
+
+function uninstallYtdlpConfigFile {
+  Write-Host "Uninstalling yt-dlp config file"
+  $ytdlpConfigPath = "$env:APPDATA\yt-dlp\"
+  if (Test-Path $ytdlpConfigPath) {
+    Backup-File("$ytdlpConfigPath\yt-dlp.conf")
+    Remove-Item -Path "$ytdlpConfigPath\config"
   }
 }
