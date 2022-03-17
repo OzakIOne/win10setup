@@ -126,10 +126,14 @@ function installTerminalConfigFile {
   }
 }
 
+function uninstallTerminalConfigFile {
+  Write-Host "Removing Windows Terminal settings"
+  Close-Process("WindowsTerminal")
   if (Test-Path -Path $TERMINAL_CONFIG_PATH -PathType Leaf) {
-    backupFile($TERMINAL_CONFIG_PATH)
-  } else {
-    New-Item -ItemType SymbolicLink -Target .\win10setup\config\settings.json -Path $TERMINAL_CONFIG_PATH
+    Backup-File($TERMINAL_CONFIG_PATH)
+  }
+  else {
+    Remove-Item -Path $TERMINAL_CONFIG_PATH
   }
 }
 
