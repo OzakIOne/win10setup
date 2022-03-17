@@ -26,9 +26,9 @@ function createDir {
   }
 }
 
-function closeRunningProcess {
+function Close-Process {
   param (
-    $ProcessName
+    [string]$ProcessName
   )
   $process = Get-Process -Name $ProcessName -ErrorAction SilentlyContinue
   if ($process) {
@@ -38,6 +38,9 @@ function closeRunningProcess {
       $process | Stop-Process -Force
     }
     Write-Host "Closed windows terminal"
+  }
+  else {
+    Write-Error "Process $ProcessName not found"
   }
 }
 function installOhMyPosh {
