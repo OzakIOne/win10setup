@@ -90,17 +90,41 @@ function installWindowsTerminal {
   pause
 }
 
-function installConfigFiles {
-  Write-Host "Copying PowerShell Profile and Windows Terminal settings"
+function installPowershellProfile {
+  Write-Host "Copying PowerShell Profile"
   New-Item -ItemType Directory -Force -Path $env:USERPROFILE\Documents\WindowsPowerShell
-  closeRunningProcess("WindowsTerminal")
   if (Test-Path -Path $PS_PROFILE_PATH -PathType Leaf) {
-    backupFile($PS_PROFILE_PATH)
-    backupFile("$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1")
-  } else {
-    New-Item -ItemType SymbolicLink -Target .\win10setup\config\Microsoft.PowerShell_profile.ps1 -Path $PS_PROFILE_PATH
-    New-Item -ItemType SymbolicLink -Target .\win10setup\config\Microsoft.PowerShell_profile.ps1 -Path "$env:USERPROFILE\Documents\PowerShell\Microsoft.PowerShell_profile.ps1"
+    Backup-File($PS_PROFILE_PATH)
+    Backup-File($PS_PROFILE_PATH_2)
   }
+  else {
+    New-Item -ItemType SymbolicLink -Target $env:USERPROFILE\Downloads\win10setup\config\Microsoft.PowerShell_profile.ps1 -Path $PS_PROFILE_PATH
+    New-Item -ItemType SymbolicLink -Target $env:USERPROFILE\Downloads\win10setup\config\Microsoft.PowerShell_profile.ps1 -Path $PS_PROFILE_PATH_2
+  }
+}
+
+function uninstallPowershellProfile {
+  Write-Host "Removing PowerShell Profile"
+  if (Test-Path -Path $PS_PROFILE_PATH -PathType Leaf) {
+    Backup-File($PS_PROFILE_PATH)
+    Backup-File($PS_PROFILE_PATH_2)
+  }
+  else {
+    Remove-Item -Path $PS_PROFILE_PATH
+    Remove-Item -Path $PS_PROFILE_PATH_2
+  }
+}
+
+function installTerminalConfigFile {
+  Write-Host "Copying Windows Terminal settings"
+  Close-Process("WindowsTerminal")
+  if (Test-Path -Path $TERMINAL_CONFIG_PATH -PathType Leaf) {
+    Backup-File($TERMINAL_CONFIG_PATH)
+  }
+  else {
+    New-Item -ItemType SymbolicLink -Target $env:USERPROFILE\Downloads\win10setup\config\settings.json -Path $TERMINAL_CONFIG_PATH
+  }
+}
 
   if (Test-Path -Path $TERMINAL_CONFIG_PATH -PathType Leaf) {
     backupFile($TERMINAL_CONFIG_PATH)
