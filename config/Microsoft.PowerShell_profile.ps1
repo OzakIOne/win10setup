@@ -87,11 +87,11 @@ function scd {
 }
 ### sxsa // analyze your WinSXS directory
 function sxsa() {
-    Dism.exe /Online /Cleanup-Image /AnalyzeComponentStore
+    sudo Dism.exe /Online /Cleanup-Image /AnalyzeComponentStore
 }
 ### sxsc // clean your WinSXS directory
 function sxsc() {
-    Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
+    sudo Dism.exe /online /Cleanup-Image /StartComponentCleanup /ResetBase
 }
 ### jjar // executes a jar file
 function jjar {
