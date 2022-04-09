@@ -67,6 +67,10 @@ function ydln {
     param([string]$url)
     youtube-dl --ignore-config "$url"
 }
+### ydpm // download the video to meme folder
+function ydpm([string]$url) {
+    yt-dlp -P "D:\Documents\ytdl\" --no-sponsorblock --embed-metadata --restrict-filenames -o "%(title)s.%(ext)s" "$url"
+}
 ### scd // will change your directory with environment variables (it's a shortcut of cd $env:dev => scd dev)
 function scd {
     param([string]$dir)
