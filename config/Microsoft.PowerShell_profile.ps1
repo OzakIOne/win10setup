@@ -23,9 +23,11 @@ if (($host.Name -eq 'ConsoleHost')) {
 Import-Module -Name Terminal-Icons
 
 Invoke-Expression (&scoop-search --hook)
-Set-PoshPrompt -Theme stelbent.minimal
-#Set-PoshPrompt -Theme craver
-#Set-PoshPrompt -Theme material
+Invoke-Expression (&starship init powershell)
+
+# Set-PoshPrompt -Theme stelbent.minimal
+# Set-PoshPrompt -Theme craver
+# Set-PoshPrompt -Theme material
 # Set-PoshPrompt -Theme patriksvensson
 
 ### phelp // outputs your profiles aliases and functions
