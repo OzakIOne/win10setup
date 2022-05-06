@@ -70,8 +70,8 @@ function ydln {
     youtube-dl --ignore-config "$url"
 }
 ### ydpm // download the video to meme folder
-function ydpm([string]$url) {
-    yt-dlp -P "D:\Documents\ytdl\" --no-sponsorblock --embed-metadata --restrict-filenames -o "%(title)s.%(ext)s" "$url"
+function ydpm([string]$url, [string]$name) {
+    yt-dlp --format-sort "codec:avc1:mp4a" -o "$name.%(ext)s" -P "D:\Documents\ytdl\" --no-sponsorblock --embed-metadata --restrict-filenames "$url" 
 }
 ### scd // will change your directory with environment variables (it's a shortcut of cd $env:dev => scd dev)
 function scd {
@@ -174,4 +174,25 @@ function upfile {
     else {
         curl.exe -F "file=@$file" https://0x0.st
     }
+}
+### ffaudio // record audio from choosen mic
+function ffaudio {
+    $c = -1
+    [System.Collections.ArrayList]$micList = @()
+    Get-PnpDevice | foreach-object {
+        if ($_.Class -eq "AudioEndpoint" -and $_.Status -eq "OK") {
+            ++$c
+            Write-Host $c $_.FriendlyName
+            $micList.Add($_.FriendlyName) > $null
+        }
+    }
+    do {
+        [int]$choice = Read-Host "Choose a mic (0 - $c)"
+    } while ($choice -gt $c -or $choice -lt 0)
+    $mic = $micList[$choice]
+    $time = (Get-Date).ToString("yyyy_MM_dd_HH_mm_ss")
+    $fileName = "\audio_$time.m4a"
+    $filePath = $env:TEMP + $fileName
+    ffmpeg -y -f dshow -i audio=$mic $filePath
+    Start-Process -FilePath C:\Windows\explorer.exe -ArgumentList "/select, ""$filePath"""
 }
