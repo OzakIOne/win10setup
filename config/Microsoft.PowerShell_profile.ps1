@@ -196,3 +196,16 @@ function ffaudio {
     ffmpeg -y -f dshow -i audio=$mic $filePath
     Start-Process -FilePath C:\Windows\explorer.exe -ArgumentList "/select, ""$filePath"""
 }
+### uto // shorten url with u.to
+function uto {
+    param([string]$url)
+    if (!$url) {
+        Write-Host "Usage: uto <url>"
+    }
+    else {
+        $ProgressPreference = 'SilentlyContinue'
+        (Invoke-WebRequest -UseBasicParsing -Uri "https://u.to/" -Method "POST" -Body "url=${url}&from=&a=add").Content -Match "https.+?(?=<)" > $null
+        Write-Host $Matches[0]
+        $Matches[0] | clip.exe
+    }
+}
