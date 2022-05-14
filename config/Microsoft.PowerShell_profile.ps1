@@ -204,7 +204,7 @@ function uto {
     }
     else {
         $ProgressPreference = 'SilentlyContinue'
-        (Invoke-WebRequest -UseBasicParsing -Uri "https://u.to/" -Method "POST" -Body "url=${url}&from=&a=add").Content -Match "https.+?(?=<)" > $null
+        (Invoke-WebRequest -UseBasicParsing -Uri "https://u.to/" -Method "POST" -Body "url=${url}&from=&a=add").Content -Match "https://u.to.+?(?=<)" > $null
         Write-Host $Matches[0]
         $Matches[0] | clip.exe
     }
