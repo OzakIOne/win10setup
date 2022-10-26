@@ -9,6 +9,3 @@ wsl --set-default-version 2
 pause
 Write-Host "Installing debian"
 Add-AppxPackage -Path .\debian.AppxBundle
-Pause
-Write-Host "Installing docker"
-"$env:USERPROFILE\Downloads\docker.exe"

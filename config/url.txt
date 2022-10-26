@@ -1,5 +1,3 @@
-https://desktop.docker.com/win/stable/amd64/Docker%20Desktop%20Installer.exe
- out=docker.exe
 https://referrals.brave.com/latest/BraveBrowserSetup.exe
  out=brave.exe
 https://code.visualstudio.com/sha/download?build=stable&os=win32-x64-user
