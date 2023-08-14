@@ -1,86 +1,268 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <DefaultAssociations>
-  <Association Identifier=".3fr" ProgId="nomacs.3fr.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".ahk" ProgId="Applications\AutoHotkeyA32.exe" ApplicationName="AutoHotkey ANSI 32-bit" />
-  <Association Identifier=".arw" ProgId="nomacs.arw.3" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier=".bk2" ProgId="Applications\notepad++.exe" ApplicationName="Notepad++ : a free (GNU) source code editor" />
-  <Association Identifier=".bmp" ProgId="nomacs.bmp.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".inf" ProgId="inffile" ApplicationName="Notepad" />
+  <Association Identifier=".log" ProgId="txtfile" ApplicationName="Notepad" />
+  <Association Identifier=".ps1" ProgId="Applications\powershell.exe" ApplicationName="Windows PowerShell" />
+  <Association Identifier=".psd1" ProgId="Microsoft.PowerShellData.1" ApplicationName="Notepad" />
+  <Association Identifier=".psm1" ProgId="Microsoft.PowerShellModule.1" ApplicationName="Notepad" />
+  <Association Identifier=".torrent" ProgId="Applications\qbittorrent.exe" ApplicationName="qBittorrent - A Bittorrent Client" />
+  <Association Identifier=".url" ProgId="InternetShortcut" ApplicationName="Internet Browser" />
+  <Association Identifier="http" ProgId="BraveHTML" ApplicationName="Brave" />
+  <Association Identifier="https" ProgId="BraveHTML" ApplicationName="Brave" />
+  <Association Identifier="mailto" ProgId="BraveHTML" ApplicationName="Brave" />
+  <Association Identifier=".htm" ProgId="BraveHTML" ApplicationName="Brave" />
+  <Association Identifier=".html" ProgId="BraveHTML" ApplicationName="Brave" />
+
+  <Association Identifier=".7z" ProgId="7-Zip.7z" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".zip" ProgId="7-Zip.zip" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".rar" ProgId="7-Zip.rar" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".001" ProgId="7-Zip.001" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".cab" ProgId="7-Zip.cab" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".iso" ProgId="7-Zip.iso" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".xz" ProgId="7-Zip.xz" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".txz" ProgId="7-Zip.txz" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".lzma" ProgId="7-Zip.lzma" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".tar" ProgId="7-Zip.tar" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".cpio" ProgId="7-Zip.cpio" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".bz2" ProgId="7-Zip.bz2" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".bzip2" ProgId="7-Zip.bzip2" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".tbz2" ProgId="7-Zip.tbz2" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".tbz" ProgId="7-Zip.tbz" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".gz" ProgId="7-Zip.gz" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".gzip" ProgId="7-Zip.gzip" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".tgz" ProgId="7-Zip.tgz" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".tpz" ProgId="7-Zip.tpz" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".z" ProgId="7-Zip.z" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".taz" ProgId="7-Zip.taz" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".lzh" ProgId="7-Zip.lzh" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".lha" ProgId="7-Zip.lha" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".rpm" ProgId="7-Zip.rpm" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".deb" ProgId="7-Zip.deb" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".arj" ProgId="7-Zip.arj" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".vhd" ProgId="7-Zip.vhd" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".vhdx" ProgId="7-Zip.vhdx" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".wim" ProgId="7-Zip.wim" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".swm" ProgId="7-Zip.swm" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".esd" ProgId="7-Zip.esd" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".fat" ProgId="7-Zip.fat" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".ntfs" ProgId="7-Zip.ntfs" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".dmg" ProgId="7-Zip.dmg" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".hfs" ProgId="7-Zip.hfs" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".xar" ProgId="7-Zip.xar" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".squashfs" ProgId="7-Zip.squashfs" ApplicationName="7-Zip File Manager" />
+  <Association Identifier=".apfs" ProgId="7-Zip.apfs" ApplicationName="7-Zip File Manager" />
+
+  <Association Identifier=".ini" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".js" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".jsx" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".ts" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".tsx" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
   <Association Identifier=".c" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
-  <Association Identifier=".cbr" ProgId="Applications\7zFM.exe" ApplicationName="7-Zip File Manager" />
   <Association Identifier=".cpp" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".h" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".py" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".java" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".php" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".html" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
   <Association Identifier=".css" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".go" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".sql" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".json" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".jsonc" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".json5" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".xml" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".yaml" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".yml" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".md" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".sh" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".bat" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".cmd" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".rs" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".perl" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".php" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".kt" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".matlab" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".ocaml" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+
+  <Association Identifier=".3fr" ProgId="nomacs.3fr.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".arw" ProgId="nomacs.arw.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".avif" ProgId="nomacs.avif.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".bmp" ProgId="nomacs.bmp.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".cr2" ProgId="nomacs.cr2.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".cr3" ProgId="nomacs.cr3.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".crw" ProgId="nomacs.crw.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".cur" ProgId="nomacs.cur.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".dng" ProgId="nomacs.dng.3" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier=".docx" ProgId="Word.Document.12" ApplicationName="Word" />
-  <Association Identifier=".flac" ProgId="mpc-be64.flac" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".drif" ProgId="nomacs.drif.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".gif" ProgId="nomacs.gif.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".heic" ProgId="nomacs.heic.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".heics" ProgId="nomacs.heics.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".heif" ProgId="nomacs.heif.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".heifs" ProgId="nomacs.heifs.3" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier=".htm" ProgId="BraveHTML" ApplicationName="Brave" />
-  <Association Identifier=".html" ProgId="BraveHTML" ApplicationName="Brave" />
+  <Association Identifier=".icns" ProgId="nomacs.icns.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".iiq" ProgId="nomacs.iiq.3" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier=".inf" ProgId="inffile" ApplicationName="Notepad" />
-  <Association Identifier=".ini" ProgId="VSCode.ini" ApplicationName="Visual Studio Code" />
-  <Association Identifier=".jfif" ProgId="Applications\nomacs.exe" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier=".jpe" ProgId="nomacs.jpg.3" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier=".jpeg" ProgId="nomacs.jpg.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".j2k" ProgId="nomacs.j2k.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".jp2" ProgId="nomacs.jp2.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".jpe" ProgId="nomacs.jpe.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".jpeg" ProgId="nomacs.jpeg.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".jpf" ProgId="nomacs.jpf.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".jpg" ProgId="nomacs.jpg.3" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier=".js" ProgId="VSCode.js" ApplicationName="Visual Studio Code" />
-  <Association Identifier=".json" ProgId="VSCode.json" ApplicationName="Visual Studio Code" />
-  <Association Identifier=".log" ProgId="txtfile" ApplicationName="Notepad" />
-  <Association Identifier=".m2ts" ProgId="mpc-be64.m2ts" ApplicationName="MPC-BE x64" />
-  <Association Identifier=".md" ProgId="Applications\notepad++.exe" ApplicationName="Notepad++ : a free (GNU) source code editor" />
-  <Association Identifier=".mkv" ProgId="mpc-be64.mkv" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".jpgx" ProgId="nomacs.jpgx.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".jpm" ProgId="nomacs.jpm.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".jps" ProgId="nomacs.jps.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".jpx" ProgId="nomacs.jpx.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".jxl" ProgId="nomacs.jxl.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".mng" ProgId="nomacs.mng.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".mos" ProgId="nomacs.mos.3" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier=".mov" ProgId="mpc-be64.mov" ApplicationName="MPC-BE x64" />
-  <Association Identifier=".MP2" ProgId="WMP11.AssocFile.MP3" ApplicationName="Windows Media Player" />
-  <Association Identifier=".mp3" ProgId="mpc-be64.mp3" ApplicationName="MPC-BE x64" />
-  <Association Identifier=".mp4" ProgId="mpc-be64.mp4" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mpo" ProgId="nomacs.mpo.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".mrw" ProgId="nomacs.mrw.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".nef" ProgId="nomacs.nef.3" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier=".nfo" ProgId="Applications\notepad++.exe" ApplicationName="Notepad++ : a free (GNU) source code editor" />
-  <Association Identifier=".nrw" ProgId="nomacs.nef.3" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier=".ogg" ProgId="mpc-be64.ogg" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".nrw" ProgId="nomacs.nrw.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".orf" ProgId="nomacs.orf.3" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier=".part" ProgId="Applications\vlc.exe" ApplicationName="VLC media player" />
-  <Association Identifier=".pdf" ProgId="Applications\SumatraPDF.exe" ApplicationName="SumatraPDF" />
+  <Association Identifier=".pbm" ProgId="nomacs.pbm.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".pef" ProgId="nomacs.pef.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".pgm" ProgId="nomacs.pgm.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".png" ProgId="nomacs.png.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".pns" ProgId="nomacs.pns.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".ppm" ProgId="nomacs.ppm.3" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier=".preset" ProgId="Applications\NOTEPAD.EXE" ApplicationName="Notepad" />
-  <Association Identifier=".ps1" ProgId="Applications\powershell.exe" ApplicationName="Windows PowerShell" />
-  <Association Identifier=".psd" ProgId="Affinity.Photo" ApplicationName="Affinity Photo" />
-  <Association Identifier=".psd1" ProgId="Microsoft.PowerShellData.1" ApplicationName="Notepad" />
-  <Association Identifier=".psm1" ProgId="Microsoft.PowerShellModule.1" ApplicationName="Notepad" />
-  <Association Identifier=".py" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".psb" ProgId="nomacs.psb.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".psd" ProgId="nomacs.psd.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".raf" ProgId="nomacs.raf.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".raw" ProgId="nomacs.raw.3" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier=".rw2" ProgId="nomacs.raw.3" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier=".scp" ProgId="txtfile" ApplicationName="Notepad" />
-  <Association Identifier=".sh" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
-  <Association Identifier=".SQL" ProgId="Applications\Code.exe" ApplicationName="Visual Studio Code" />
+  <Association Identifier=".roh" ProgId="nomacs.roh.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".rw2" ProgId="nomacs.rw2.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".srw" ProgId="nomacs.srw.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".svg" ProgId="nomacs.svg.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".svgz" ProgId="nomacs.svgz.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".tga" ProgId="nomacs.tga.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".tif" ProgId="nomacs.tif.3" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier=".tiff" ProgId="nomacs.tif.3" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier=".torrent" ProgId="Applications\qbittorrent.exe" ApplicationName="qBittorrent - A Bittorrent Client" />
-  <Association Identifier=".TS" ProgId="mpc-be64.ts" ApplicationName="MPC-BE x64" />
-  <Association Identifier=".txt" ProgId="Applications\notepad++.exe" ApplicationName="Notepad++ : a free (GNU) source code editor" />
-  <Association Identifier=".url" ProgId="InternetShortcut" ApplicationName="Internet Browser" />
-  <Association Identifier=".wav" ProgId="mpc-be64.wav" ApplicationName="MPC-BE x64" />
-  <Association Identifier=".webm" ProgId="mpc-be64.webm" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".tiff" ProgId="nomacs.tiff.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".vec" ProgId="nomacs.vec.3" ApplicationName="nomacs - Image Lounge" />
+  <Association Identifier=".wbmp" ProgId="nomacs.wbmp.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".webp" ProgId="nomacs.webp.3" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier=".wtx" ProgId="txtfile" ApplicationName="Notepad" />
   <Association Identifier=".x3f" ProgId="nomacs.x3f.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".xbm" ProgId="nomacs.xbm.3" ApplicationName="nomacs - Image Lounge" />
   <Association Identifier=".xpm" ProgId="nomacs.xpm.3" ApplicationName="nomacs - Image Lounge" />
-  <Association Identifier="http" ProgId="BraveHTML" ApplicationName="Brave" />
-  <Association Identifier="https" ProgId="BraveHTML" ApplicationName="Brave" />
-  <Association Identifier="mailto" ProgId="BraveHTML" ApplicationName="Brave" />
-  <Association Identifier="microsoft-edge" ProgId="MSEdgeHTM" ApplicationName="Microsoft Edge" />
-  <Association Identifier="microsoft-edge-holographic" ProgId="MSEdgeHTM" ApplicationName="Microsoft Edge" />
-  <Association Identifier="ms-xbl-3d8b930f" ProgId="MSEdgeHTM" ApplicationName="Microsoft Edge" />
-  <Association Identifier="read" ProgId="MSEdgeHTM" ApplicationName="Microsoft Edge" />
+
+
+
+
+
+
+
+  <Association Identifier=".3g2" ProgId="mpc-be64.3g2" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".3ga" ProgId="mpc-be64.3ga" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".3gp" ProgId="mpc-be64.3gp" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".3gp2" ProgId="mpc-be64.3gp2" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".3gpp" ProgId="mpc-be64.3gpp" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".aac" ProgId="mpc-be64.aac" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".ac3" ProgId="mpc-be64.ac3" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".aif" ProgId="mpc-be64.aif" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".aifc" ProgId="mpc-be64.aifc" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".aiff" ProgId="mpc-be64.aiff" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".alac" ProgId="mpc-be64.alac" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".amr" ProgId="mpc-be64.amr" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".amv" ProgId="mpc-be64.amv" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".aob" ProgId="mpc-be64.aob" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".ape" ProgId="mpc-be64.ape" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".apl" ProgId="mpc-be64.apl" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".asf" ProgId="mpc-be64.asf" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".asx" ProgId="mpc-be64.asx" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".au" ProgId="mpc-be64.au" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".avi" ProgId="mpc-be64.avi" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".bdmv" ProgId="mpc-be64.bdmv" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".bik" ProgId="mpc-be64.bik" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".cda" ProgId="mpc-be64.cda" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".divx" ProgId="mpc-be64.divx" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".dsa" ProgId="mpc-be64.dsa" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".dsm" ProgId="mpc-be64.dsm" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".dss" ProgId="mpc-be64.dss" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".dsv" ProgId="mpc-be64.dsv" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".dts" ProgId="mpc-be64.dts" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".dtshd" ProgId="mpc-be64.dtshd" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".dtsma" ProgId="mpc-be64.dtsma" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".evo" ProgId="mpc-be64.evo" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".f4v" ProgId="mpc-be64.f4v" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".flac" ProgId="mpc-be64.flac" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".flc" ProgId="mpc-be64.flc" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".fli" ProgId="mpc-be64.fli" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".flic" ProgId="mpc-be64.flic" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".flv" ProgId="mpc-be64.flv" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".hdmov" ProgId="mpc-be64.hdmov" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".iflv" ProgId="mpc-be64.iflv" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".ifo" ProgId="mpc-be64.ifo" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".ivf" ProgId="mpc-be64.ivf" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".m1a" ProgId="mpc-be64.m1a" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".m1v" ProgId="mpc-be64.m1v" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".m2a" ProgId="mpc-be64.m2a" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".m2p" ProgId="mpc-be64.m2p" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".m2t" ProgId="mpc-be64.m2t" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".m2ts" ProgId="mpc-be64.m2ts" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".m2v" ProgId="mpc-be64.m2v" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".m3u" ProgId="mpc-be64.m3u" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".m3u8" ProgId="mpc-be64.m3u8" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".m4a" ProgId="mpc-be64.m4a" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".m4b" ProgId="mpc-be64.m4b" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".m4r" ProgId="mpc-be64.m4r" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".m4v" ProgId="mpc-be64.m4v" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mid" ProgId="mpc-be64.mid" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".midi" ProgId="mpc-be64.midi" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mka" ProgId="mpc-be64.mka" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mkv" ProgId="mpc-be64.mkv" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mlp" ProgId="mpc-be64.mlp" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mov" ProgId="mpc-be64.mov" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mp2" ProgId="mpc-be64.mp2" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mp2v" ProgId="mpc-be64.mp2v" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mp3" ProgId="mpc-be64.mp3" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mp4" ProgId="mpc-be64.mp4" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mp4v" ProgId="mpc-be64.mp4v" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mpa" ProgId="mpc-be64.mpa" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mpc" ProgId="mpc-be64.mpc" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mpcpl" ProgId="mpc-be64.mpcpl" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mpe" ProgId="mpc-be64.mpe" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mpeg" ProgId="mpc-be64.mpeg" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mpg" ProgId="mpc-be64.mpg" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mpls" ProgId="mpc-be64.mpls" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mpv2" ProgId="mpc-be64.mpv2" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mpv4" ProgId="mpc-be64.mpv4" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".mts" ProgId="mpc-be64.mts" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".ofr" ProgId="mpc-be64.ofr" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".ofs" ProgId="mpc-be64.ofs" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".oga" ProgId="mpc-be64.oga" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".ogg" ProgId="mpc-be64.ogg" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".ogm" ProgId="mpc-be64.ogm" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".ogv" ProgId="mpc-be64.ogv" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".opus" ProgId="mpc-be64.opus" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".pls" ProgId="mpc-be64.pls" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".pva" ProgId="mpc-be64.pva" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".ra" ProgId="mpc-be64.ra" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".ram" ProgId="mpc-be64.ram" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".rm" ProgId="mpc-be64.rm" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".rmi" ProgId="mpc-be64.rmi" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".rmm" ProgId="mpc-be64.rmm" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".rmvb" ProgId="mpc-be64.rmvb" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".rp" ProgId="mpc-be64.rp" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".rt" ProgId="mpc-be64.rt" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".smil" ProgId="mpc-be64.smil" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".smk" ProgId="mpc-be64.smk" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".snd" ProgId="mpc-be64.snd" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".swf" ProgId="mpc-be64.swf" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".tp" ProgId="mpc-be64.tp" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".trp" ProgId="mpc-be64.trp" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".ts" ProgId="mpc-be64.ts" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".rec" ProgId="mpc-be64.rec" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".tak" ProgId="mpc-be64.tak" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".tta" ProgId="mpc-be64.tta" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".vob" ProgId="mpc-be64.vob" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".wav" ProgId="mpc-be64.wav" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".wax" ProgId="mpc-be64.wax" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".webm" ProgId="mpc-be64.webm" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".wm" ProgId="mpc-be64.wm" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".wma" ProgId="mpc-be64.wma" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".wmp" ProgId="mpc-be64.wmp" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".wmv" ProgId="mpc-be64.wmv" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".wmx" ProgId="mpc-be64.wmx" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".wv" ProgId="mpc-be64.wv" ApplicationName="MPC-BE x64" />
+  <Association Identifier=".wvx" ProgId="mpc-be64.wvx" ApplicationName="MPC-BE x64" />
 </DefaultAssociations>
